@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import torch
 import torch.nn as nn
 import torchvision
@@ -13,7 +14,7 @@ def main():
     
     # load model
     net = ImageRetrievalNet()
-    state = torch.load('./weights/gem.pth')
+    state = torch.load('//home/yujc/robotws/DSLAM_one/src/ros_dslam_new/script/ROS_GEM//weights/gem.pth')
     net.load_state_dict(state['state_dict'], strict=False)
     
     # image preprocess
@@ -28,8 +29,8 @@ def main():
     ])
     
     # list of image names
-    images = ['data//frame00001.png']
-    qimages = ['data/frame00002.png']
+    images = ['/home/yujc/robotws/dataset/image_503_loop/left_7.png']
+    qimages = ['/home/yujc/robotws/dataset/image_503_loop/left_2665.png']
     
     # extract features
     vecs = extract_vectors(net, images, transform)
