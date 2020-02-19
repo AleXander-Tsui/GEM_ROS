@@ -76,7 +76,7 @@ def main():
     global looptrans_pub, looptrans_name_pub
     rospy.init_node('matcher', anonymous=True)
     rospy.Subscriber("PRrepresentor", PRrepresentor, callback)
-    looptrans_pub = rospy.Publisher("looppose",TransformStamped, queue_size=3)
+    looptrans_pub = rospy.Publisher("looppose_deee",TransformStamped, queue_size=3)
     looptrans_name_pub = rospy.Publisher("loopfnames",String, queue_size=3)
     rospy.spin()
 

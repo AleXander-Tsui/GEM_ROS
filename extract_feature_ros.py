@@ -94,7 +94,7 @@ def main():
     # load model
     global  bridge,net,transform,representor_pub
     net = ImageRetrievalNet()
-    state = torch.load('//home/yujc/robotws/DSLAM_one/src/ros_dslam_new/script/ROS_GEM//weights/gem.pth')
+    state = torch.load('/home/yujc/robotws/DSLAM_one/src/ROS-DSLAM/script/ROS_GEM/weights/gem.pth')
     net.load_state_dict(state['state_dict'], strict=False)
     
     # image preprocess
